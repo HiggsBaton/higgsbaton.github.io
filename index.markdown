@@ -52,7 +52,7 @@ title: Блог
   <h3>Categories:</h3>
   {% for category in site.categories %}
     <img src="assets/pictures/loading-1.svg" class="icon_contacts">
-    <a href="{{ site.baseurl }}/{{ category | first }}/">{{ category | first }}</a>
+    <a href="{{ site.baseurl }}/{{ category | first }}">{{ category | first }}</a>
     <br>
   {% endfor %}
 </div>

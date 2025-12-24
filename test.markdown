@@ -30,7 +30,7 @@ category: test
   <ul>
   {% for category in site.categories %}
     <li>
-      <a href="{{ site.baseurl }}/{{ category | first }}/">{{ category | first }}</a>
+      <a href="{{ site.baseurl }}/{{ category | first }}">{{ category | first }}</a>
     </li>
   {% endfor %}
   </ul>
