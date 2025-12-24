@@ -1,11 +1,10 @@
 ---
 layout: default
-title: Блог 
+title: Блог
 ---
 <div class="home_table">
 <div class="to_left_hidden">
-    <h2>Welcome to my Blog!</h2>
-    <small>A tiny little blog in a big big world :)</small>
+    <h2>Последние записи:</h2>
     <br><br>
     <hr>
     <ul>
