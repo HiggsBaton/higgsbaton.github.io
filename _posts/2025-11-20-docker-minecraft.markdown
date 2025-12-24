@@ -2,7 +2,7 @@
 layout: post
 title:  "Сказ о сервере Minecraft"
 date:   2025-11-20
-categories: DevOps family
+categories: devops family
 ---
 
 Жил был Володя и было у него три сына.
