@@ -7,19 +7,19 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Сказ о сервере Minecraft" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Жил был Вова и было у него три сына. Младшие два ещё под стол ходили, а старший детина вырос." />
-<meta property="og:description" content="Жил был Вова и было у него три сына. Младшие два ещё под стол ходили, а старший детина вырос." />
-<link rel="canonical" href="http://localhost:4000/devops/family/2025/11/20/docker-minecraft.html" />
-<meta property="og:url" content="http://localhost:4000/devops/family/2025/11/20/docker-minecraft.html" />
+<meta name="description" content="Жил был Володя и было у него три сына." />
+<meta property="og:description" content="Жил был Володя и было у него три сына." />
+<link rel="canonical" href="http://0.0.0.0:4000/devops/family/2025/11/20/docker-minecraft.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/devops/family/2025/11/20/docker-minecraft.html" />
 <meta property="og:site_name" content="Мой блог" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-11-20T00:00:00+03:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Сказ о сервере Minecraft" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-11-20T00:00:00+03:00","datePublished":"2025-11-20T00:00:00+03:00","description":"Жил был Вова и было у него три сына. Младшие два ещё под стол ходили, а старший детина вырос.","headline":"Сказ о сервере Minecraft","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/devops/family/2025/11/20/docker-minecraft.html"},"url":"http://localhost:4000/devops/family/2025/11/20/docker-minecraft.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-11-20T00:00:00+03:00","datePublished":"2025-11-20T00:00:00+03:00","description":"Жил был Володя и было у него три сына.","headline":"Сказ о сервере Minecraft","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/devops/family/2025/11/20/docker-minecraft.html"},"url":"http://0.0.0.0:4000/devops/family/2025/11/20/docker-minecraft.html"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Мой блог" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="Мой блог" /></head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/">Мой блог</a><nav class="site-nav">
@@ -47,15 +47,421 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>Жил был Вова и было у него три сына.
-Младшие два ещё под стол ходили, а старший детина вырос.</p>
+    <p>Жил был Володя и было у него три сына.</p>
 
-<p>&lt;В общем дети просят, каждый как в сказке про аленкий цветочек, только от младшего к старшему&gt;
-В итоге старший просит сервер ему поднять для майнкрафта, чтобы с другом играть
-&lt;Задумался <del>старче</del>&gt; сел на стул и стал думать</p>
+<p>Как-то раз собрался он с собакой гулять, да дети его остановили, говорят подожди, батюшка, коль собрался ты в дорогу, просьбы есть у нас.</p>
 
-<p>Долго думы думаются, да быстро прод падает</p>
+<p>Проорал все уши младшенький, подбежал и говорит ему первый:</p>
+<ul>
+  <li>“Мутик хочу!”
+Подумал Володя и сказал:</li>
+  <li>“Хорошо, малыш, Включу я тебе мультик”, и включил.</li>
+</ul>
 
+<p>Протопал по всей квартире как бегемотик средненький и говорит:</p>
+<ul>
+  <li>“Папа, дай телефон!”
+Снова задумался отец, и подумав мало ли, много ли времени, согласился.</li>
+  <li>“Хорошо, сынок, держи мобильный телефон”.</li>
+</ul>
+
+<p>Подошёл к нему и старшенький, и говорит:</p>
+<ul>
+  <li>“Родной мой батюшка, не нужен мне ни телефон, ни мультики, а нужен мне сервер, чтобы с другом своим школьным в Minecraft поиграть.”
+Задумался Вова пуще прежнего. Мало ли, много ли времени он думал, неизвестно, а известно что сказал он ему так:</li>
+  <li>“Задал ты мне задачку потяжелее братьев своих, да постараюсь и тебе угодить”.</li>
+</ul>
+
+<p>И вот, собрался он с мыслями и поднял сервер.</p>
+
+<p>В первой итерации всё было сделано более менее вручную:</p>
+<ol>
+  <li>Поднял сервер в <code class="language-plaintext highlighter-rouge">timeweb</code></li>
+  <li>С сайта <code class="language-plaintext highlighter-rouge">minecraft.net</code> скачал сервер</li>
+  <li>Запустил его, отредактировал настройки, посмотрел, что работает</li>
+</ol>
+
+<p>… вручную не очень удобно и не очень интересно, так что …</p>
+
+<p>Написал несколько <code class="language-plaintext highlighter-rouge">.sh</code> скриптов, чтобы имея IP сервера можно было его настроить через использование этих скриптов.</p>
+
+<p>В начале напишем Dockerfile, чтобы потом копировать на сервер образ с нужной версией игры:
+Важно отметить, что запускаясь в первый раз, сервер не поднимается и просит принятия EULA, что делается редактурой текстового файлика eula.txt.
+Поэтому я взял всю папку сервера, который в первый раз запустил и поместил её в контейнер.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM ubuntu:24.04
+RUN apt update &amp;&amp; apt install default-jdk default-jre -y
+COPY ./minecraft_server /root/minecraft_server
+WORKDIR /root/minecraft_server/
+ENTRYPOINT ["java", "-Xmx1024M", "-Xms1024M", "-jar", "server.jar", "nogui"]
+</code></pre></div></div>
+
+<p>Собрав этот образ, я сделал вот такой скрипт для копирования образа контейнера с сервером и папки с миром на сервер:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scp -i ~/.ssh/id_ed25519_tw ./minecraft.tar root@$1:/root
+scp -i ~/.ssh/id_ed25519_tw -r ./world root@$1:/root
+
+# docker must be installed on the machine
+#scp -i ~/.ssh/id_ed25519_tw ./docker.sh root@$1:/root/docker.sh
+
+ssh -i ~/.ssh/id_ed25519_tw root@$1 docker load -i minecraft.tar
+
+ssh -i ~/.ssh/id_ed25519_tw root@$1 docker run -d -p 25565:25565 --restart always -v /root/world:/root/minecraft_server/world minecraft:1.21.20
+</code></pre></div></div>
+
+<p>В результате сервер определённой версии поднимался и всё работало.
+Для сохранения прогресса можно просто копировать папку world на сервер и обратно, чтобы при следующем запуске её можно было использовать.</p>
+
+<p>И тут я подумал, что хранить всё лучше в гите и убрать необходимость ручного создания вервера в <code class="language-plaintext highlighter-rouge">timeweb</code> и запуска скриптов настройки можно через Gitlab CI/CD.
+Так что создал репозиторий.</p>
+
+<p>В этот момент также появилась необходимость менять версии игры, обновляя версию сервера тоже, и использовать разные папки <code class="language-plaintext highlighter-rouge">world</code> с мирами для того, чтобы играть в adventure-карты.</p>
+
+<p>Получилось, что наш репозиторий должен выполнять вот такие шаги:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>stages:
+  - docker-image # собираем образ с сервером и загружаем в container registry
+  - upload-files # загружаем папку world в package registry
+  - create-server # создаём сервер и настраиваем
+  - destroy-server # удаляем сервер
+</code></pre></div></div>
+
+<p>Теперь подробнее про каждый stage.</p>
+
+<hr />
+<h3 id="--1-docker-image">-&gt; 1. docker-image</h3>
+
+<hr />
+
+<p>Тут кажется всё понятно, собираем образ latest и загружаем его, но есть небольшой скрипт, который позволяет выбрать ту версию, которая нужна.</p>
+
+<p>Вот сам stage:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>build-upload-docker-image: # собираем образ с сервером и загружаем в container registry
+  stage: docker-image
+  before_script:
+    - cd docker
+  script:
+    - echo "${CI_REGISTRY_PASSWORD}" | docker login registry.gitlab.com -u ${CI_REGISTRY_USER} --password-stdin
+    - docker build -t registry.gitlab.com/boguslavskiy/myminecraftserver --build-arg MINECRAFT_VERSION=${MINECRAFT_VERSION} .
+    - docker push registry.gitlab.com/boguslavskiy/myminecraftserver
+  when: manual
+</code></pre></div></div>
+
+<p>Всё, что связано со сборкой образа я вынес в папку <code class="language-plaintext highlighter-rouge">docker</code>.</p>
+
+<p>Для adventure-карт нужно искать определённую версию сервера, на сайте <code class="language-plaintext highlighter-rouge">minecraft.net</code> я списка серверов с разными версиями не нашёл, но гугл помог найти старницу <code class="language-plaintext highlighter-rouge">mcversions.net</code>.</p>
+
+<p>Для получения образа с определённой версией игры, я набросал вот такой скрипт:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># download the server jar
+
+# if no arguments passed, download latest version from mcversions.net, otherwise look for the required version
+if [ "$1" = "latest" ]; then
+    REQUIRED_VERSION=$( curl https://mcversions.net | awk -F "Latest Release" '{print $2}' | awk -F "&lt;br&gt;" '{print $1}' | awk -F "&lt;/span&gt;" '{print $3}' )
+else
+    REQUIRED_VERSION=$1
+fi
+
+VERSION_CODE=$( curl https://mcversions.net/download/${REQUIRED_VERSION} | awk -F "/server.jar" '{print $1}' | awk -F "https://piston-data.mojang.com/v1/objects/" '{print $2}' )
+
+wget "https://piston-data.mojang.com/v1/objects/${VERSION_CODE}/server.jar"
+
+java -Xmx1024M -Xms1024M -jar server.jar nogui
+</code></pre></div></div>
+
+<p>awk тут конечно не очень красиво выглядят, но то, что мне нужно я получаю :)
+Ну а запуск сервера этот тоже костыль для того, чтобы потом, запустив его повторно просто указать ему пути к настройкам, принятой EULA и папку world.</p>
+
+<p>Этот скрипт я использую в изменённом Dockerfile, чтобы при сборке образа можно было указать какая версия нам нужна или просто искать самую последнюю:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM ubuntu:24.04
+ARG MINECRAFT_VERSION="latest"
+ENV MINECRAFT_VERSION=${MINECRAFT_VERSION}
+WORKDIR /root
+COPY ./server_jar_download.sh ./server_jar_download.sh
+RUN apt update &amp;&amp; apt install default-jdk default-jre curl wget -y &amp;&amp; ./server_jar_download.sh "${MINECRAFT_VERSION}"
+ENTRYPOINT ["java", "-Xmx1024M", "-Xms1024M", "-jar", "server.jar", "nogui"]
+</code></pre></div></div>
+
+<hr />
+<h3 id="--2-upload-files">-&gt; 2. upload-files</h3>
+
+<hr />
+
+<p>Тут я упаковываю сначала папку с миром игры, а потом и папку с настройками сервера в zip архивы и отправляю их на хранение с указанием версии сервера и названия мира.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>upload-world: # загружаем папку world в package registry
+  stage: upload-files
+  script:
+    - zip -r world.zip ./configs/${WORLD}/world
+    - |
+      curl --location --header "JOB-TOKEN: ${CI_JOB_TOKEN}" \
+           --upload-file world.zip \
+           "https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/generic/${WORLD}/${MINECRAFT_VERSION}/world.zip"
+  when: manual
+
+upload-properties: # загружаем папку с настройками в package registry
+  stage: upload-files
+  script:
+    - zip -r server.properties.zip ./configs/${WORLD}/server.properties
+    - |
+      curl --location --header "JOB-TOKEN: ${CI_JOB_TOKEN}" \
+           --upload-file server.properties.zip \
+           "https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/generic/${WORLD}/${MINECRAFT_VERSION}/server.properties.zip"
+  when: on_success
+  needs:
+    - upload-world
+</code></pre></div></div>
+
+<p>Сделал отдельную папку <code class="language-plaintext highlighter-rouge">configs</code> в репозитории, чтобы было удобнее хранить там разные миры и разные конфиги для серверов.</p>
+
+<p>Выглядит это так:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── configs
+│   ├── base_world
+│   │   ├── server.properties
+│   │   └── world
+│   ├── sunny_goo_bloom
+│   │   ├── other
+│   │   ├── server.properties
+│   │   └── world
+│   └── whirlpool
+│       ├── server.properties
+│       └── world
+</code></pre></div></div>
+
+<hr />
+<h3 id="--3-create-server">-&gt; 3. create-server</h3>
+
+<hr />
+
+<p>Теперь у нас есть всё, что нужно для того, чтобы включить сервер.
+Кроме самого сервера :)
+Нам нужно создать и настроить сервер.</p>
+
+<p>Я делал это в <code class="language-plaintext highlighter-rouge">timeweb</code>, так как изначально пользовался им, чтобы посмотреть, как он работает с <del><code class="language-plaintext highlighter-rouge">terraform</code></del> <code class="language-plaintext highlighter-rouge">opentofu</code>.</p>
+
+<p>Сначала нужно создать сервер и получить его IP для дальнейшей работы с ним.
+Почитав вывод <code class="language-plaintext highlighter-rouge">opentofu</code> я увидел, там уже указан IP нашего нового сервера, так что снова использую awk, чтобы выделить именно его.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>create-server:
+  stage: create-server
+  image: opentofu:latest
+  before_script:
+    - cd tofu
+    - echo "timeweb_key = "'"'"${TIMEWEB_KEY}"'"' &gt; terraform.tfvars
+    - echo "" &gt;&gt; terraform.tfvars
+    # also we can provide other variables here
+  script:
+    - tofu init
+    - tofu apply -auto-approve &gt; tofu_output
+    - IP=$( tail -n 4 tofu_output | awk -F "]" '{print $1}' | awk -F "-" '{print $2}' )
+    - echo $IP
+    - echo "IP=$IP" &gt;&gt; ../build.env
+  artifacts:
+    paths:
+      - tofu/terraform.tfstate
+      - tofu/terraform.tfvars
+    reports:
+      dotenv: build.env
+    when: on_success
+  when: manual
+</code></pre></div></div>
+
+<p>Для второго шага в <code class="language-plaintext highlighter-rouge">timeweb</code> нужно настроить ssh-ключ, который добавляется на сервер по умолчанию при его создании, и тогда можно использовать его, чтобы настроить сервер через <code class="language-plaintext highlighter-rouge">ansible </code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>setup-server:
+  stage: create-server
+  image: ansible
+  before_script:
+    # setup rsa key
+    - echo "${SSH_PRIVATE_KEY}" &gt; tw_key_coded
+    - base64 -d -i tw_key_coded -o ansible/tw_key
+    - chmod 700 ansible/tw_key
+    # setup community.docker
+    - ansible-galaxy collection install community.docker
+    # setup ansible variables
+    - echo $IP &gt;&gt; ansible/inventory.ini
+    - echo "gitlab_registry_url"':'" "'"'registry.gitlab.com'"' &gt; ansible/vars/external_vars.yml
+    - echo "gitlab_username"':'" "'"'Boguslavskiy'"' &gt;&gt; ansible/vars/external_vars.yml
+    - echo "gitlab_token"':'" "'"'${TOKEN}'"' &gt;&gt; ansible/vars/external_vars.yml
+    - echo "image_name"':'" "'"'boguslavskiy/myminecraftserver'"' &gt;&gt; ansible/vars/external_vars.yml
+    - echo "image_tag"':'" "'"'latest'"' &gt;&gt; ansible/vars/external_vars.yml
+    - echo "gitlab_package_url"':'" "'"'https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/generic/${WORLD}/${MINECRAFT_VERSION}/'"' &gt;&gt; ansible/vars/external_vars.yml
+    - cd ansible
+  script:
+    - ansible-playbook -i inventory.ini playbook_setup.yml -u root --key-file tw_key
+    - ansible-playbook -i inventory.ini playbook_get_image.yml -u root --key-file tw_key
+  artifacts:
+    paths:
+      - ansible/inventory.ini
+      - ansible/vars/external_vars.yml
+      - ansible/tw_key
+  dependencies:
+    - create-server
+  when: on_success
+  needs:
+    - create-server
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">ansible</code> скачивает образ, папку world и настройки сервера.</p>
+
+<p>Скачиваем папку world и настройки:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- name: Install unzip
+  ansible.builtin.apt:
+    name: unzip
+
+- name: Download the world package file
+  ansible.builtin.get_url:
+    url: "/world.zip"
+    dest: "/root/world.zip"
+    headers:
+      Private-Token: ""
+    mode: "0644"
+
+- name: Unarchive the world package file
+  ansible.builtin.unarchive:
+    src: /root/world.zip
+    dest: /root/
+    remote_src: yes
+
+- name: Download the settings package file
+  ansible.builtin.get_url:
+    url: "/server.properties.zip"
+    dest: "/root/server.properties.zip"
+    headers:
+      Private-Token: ""
+    mode: "0644"
+
+- name: Unarchive the world package file
+  ansible.builtin.unarchive:
+    src: /root/server.properties.zip
+    dest: /root/
+    remote_src: yes
+</code></pre></div></div>
+
+<p>Скачиваем образ:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- name: Log in to GitLab Container Registry
+  community.docker.docker_login:
+    registry_url: ""
+    username: ""
+    password: ""
+    reauthorize: yes
+
+- name: Pull the Docker image
+  community.docker.docker_image:
+    name: "/"
+    tag: ""
+    source: pull
+</code></pre></div></div>
+
+<p>Когда с этим закончено, мы можем запустить сервер, указав пути для volumes:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>start-server:
+  stage: create-server
+  script:
+    - ssh -i ~/.ssh/tw_key root@$IP mv /root/configs/${WORLD}/* /root/
+    - |
+      ssh -i ~/.ssh/tw_key root@$IP docker run -d -p 25565:25565 --name minecraft --restart always \
+        -v /root/world:/root/world \
+        -v /root/server.properties/banned-ips.json:/root/banned-ips.json \
+        -v /root/server.properties/banned-players.json:/root/banned-players.json \
+        -v /root/server.properties/eula.txt:/root/eula.txt \
+        -v /root/server.properties/ops.json:/root/ops.json \
+        -v /root/server.properties/server.properties:/root/server.properties \
+        -v /root/server.properties/usercache.json:/root/usercache.json \
+        -v /root/server.properties/whitelist.json:/root/whitelist.json \
+        registry.gitlab.com/boguslavskiy/myminecraftserver:latest
+  dependencies:
+    - create-server
+    - setup-server
+  when: on_success
+  needs:
+    - create-server
+    - setup-server
+</code></pre></div></div>
+
+<hr />
+<h3 id="--4-destroy-server">-&gt; 4. destroy-server</h3>
+
+<hr />
+
+<p>Удаляю сервер я тоже через <code class="language-plaintext highlighter-rouge">opentofu</code>, но перед удалением можно загрузить в package registry папку world и настройки, чтобы сохранить изменения.
+Вот так выглядит ansible-роль:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- name: Install gzip
+  ansible.builtin.apt:
+    name: gzip
+
+- name: Compress world diretory
+  community.general.archive:
+    path: "/root/world"
+    dest: "/root/world.zip"
+
+- name: Fetch the world.zip
+  ansible.builtin.fetch:
+    src: /root/world.zip
+    dest: world.zip
+    flat: yes
+
+- name: Upload package to GitLab Generic Package Registry
+  ansible.builtin.uri:
+    url: "/world.zip"
+    method: PUT
+    headers:
+      Private-Token: ""
+    status_code: [200, 201]
+    src: "world.zip"
+
+- name: Compress server.properties diretory
+  community.general.archive:
+    path: "/root/server.properties"
+    dest: "/root/server.properties.zip"
+
+- name: Fetch the server.properties.zip
+  ansible.builtin.fetch:
+    src: /root/server.properties.zip
+    dest: server.properties.zip
+    flat: yes
+
+- name: Upload package to GitLab Generic Package Registry
+  ansible.builtin.uri:
+    url: "/server.properties.zip"
+    method: PUT
+    headers:
+      Private-Token: ""
+    status_code: [200, 201]
+    src: "server.properties.zip"
+</code></pre></div></div>
+
+<p>А вот jobs:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>prepare-destroy:
+  stage: destroy-server
+  image: ansible
+  before_script:
+    - ansible-galaxy collection install community.general
+    - cd ansible
+  script:
+    - ansible-playbook -i inventory.ini playbook_save_setup.yml -u root --key-file tw_key
+  dependencies:
+    - setup-server
+  needs:
+    - setup-server
+  when: manual
+
+destroy-server:
+  stage: destroy-server
+  image: opentofu:latest
+  before_script:
+    - cd tofu
+  script:
+    - tofu init
+    - tofu destroy -auto-approve
+  dependencies:
+    - create-server
+  when: manual
+</code></pre></div></div>
+
+<hr />
+
+<p>Посмотреть как выглядит весь репозиторий можно <a href="">тут</a></p>
+
+<p>Чтобы подытожить, напишу, что пока ещё процесс меняется, сохранение прогресса (папки world и настроек) оказалось не очень нужным, а вот выбор версии сервера и заменяемость миров (для adventure-карт) оказались очень удобны.</p>
+
+<p>Следующий этап - установка OBS (и/или другого ПО для записи геймплея) и запись прохождений карт :)</p>
+
+<p>Вот и сказочке конец, а кто читал - тот молодец!</p>
 
   </div><a class="u-url" href="/devops/family/2025/11/20/docker-minecraft.html" hidden></a>
 </article>
