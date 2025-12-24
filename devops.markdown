@@ -9,7 +9,7 @@ category: devops
     {% for category in site.categories %}
       {% for post in category.last %}
         {% for category in post.categories %}
-	  {% if category == page.category %}
+          {% if category == page.category %}
             <li><a href="{{ post.url }}">{{ post.title }}</a></li>
           {% endif %}
         {% endfor %}
