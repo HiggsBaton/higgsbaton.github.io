@@ -6,13 +6,12 @@ category: devops
 <div class="to_left_hidden">
   <h2>Category: {{ page.category }}</h2>
   <ul>
-    {% for category in site.categories %}
-      {% for post in category.last %}
-        {% for category in post.categories %}
-          {% if category == page.category %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-          {% endif %}
-        {% endfor %}
+    {% for post in site.posts %}
+      {% for category in post.categories %}
+        {% if category == page.category %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% break %}
+        {% endif %}
       {% endfor %}
     {% endfor %}
   </ul>

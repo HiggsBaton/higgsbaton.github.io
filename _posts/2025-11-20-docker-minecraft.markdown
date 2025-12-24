@@ -79,7 +79,7 @@ stages:
 Теперь подробнее про каждый stage.
 
 ---
--> 1. docker-image
+### -> 1. docker-image
 
 ---
 
@@ -135,7 +135,7 @@ ENTRYPOINT ["java", "-Xmx1024M", "-Xms1024M", "-jar", "server.jar", "nogui"]
 ```
 
 ---
--> 2. upload-files
+### -> 2. upload-files
 
 ---
 
@@ -183,7 +183,7 @@ upload-properties: # загружаем папку с настройками в 
 ```
 
 ---
--> 3. create-server
+### -> 3. create-server
 
 ---
 
@@ -337,7 +337,7 @@ start-server:
 ```
 
 ---
--> 4. destroy-server
+### -> 4. destroy-server
 
 ---
 
