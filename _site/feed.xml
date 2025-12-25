@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-12-24T16:10:16+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Мой блог</title><subtitle>Блог обо всём, работа, хобби, дети, семейная жизнь.</subtitle><entry><title type="html">Сказ о сервере Minecraft</title><link href="http://localhost:4000/devops/family/2025/11/20/docker-minecraft.html" rel="alternate" type="text/html" title="Сказ о сервере Minecraft" /><published>2025-11-20T00:00:00+03:00</published><updated>2025-11-20T00:00:00+03:00</updated><id>http://localhost:4000/devops/family/2025/11/20/docker-minecraft</id><content type="html" xml:base="http://localhost:4000/devops/family/2025/11/20/docker-minecraft.html"><![CDATA[<p>Жил был Володя и было у него три сына.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-12-25T15:24:24+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Мой блог</title><subtitle>Блог обо всём, работа, хобби, дети, семейная жизнь.</subtitle><entry><title type="html">Сказ о сервере Minecraft</title><link href="http://localhost:4000/devops/family/2025/11/20/docker-minecraft.html" rel="alternate" type="text/html" title="Сказ о сервере Minecraft" /><published>2025-11-20T00:00:00+03:00</published><updated>2025-11-20T00:00:00+03:00</updated><id>http://localhost:4000/devops/family/2025/11/20/docker-minecraft</id><content type="html" xml:base="http://localhost:4000/devops/family/2025/11/20/docker-minecraft.html"><![CDATA[<p>Жил был Володя и было у него три сына.</p>
 
 <p>Как-то раз собрался он с собакой гулять, да дети его остановили, говорят подожди, батюшка, коль собрался ты в дорогу, просьбы есть у нас.</p>
 
@@ -406,7 +406,7 @@ destroy-server:
 
 <hr />
 
-<p>Посмотреть как выглядит весь репозиторий можно <a href="">тут</a></p>
+<p>Посмотреть как выглядит весь репозиторий можно <a href="https://gitlab.com/vladimir-boguslavskiy-public/docker-minecraft">тут</a></p>
 
 <p>Чтобы подытожить, напишу, что пока ещё процесс меняется, сохранение прогресса (папки world и настроек) оказалось не очень нужным, а вот выбор версии сервера и заменяемость миров (для adventure-карт) оказались очень удобны.</p>
 
