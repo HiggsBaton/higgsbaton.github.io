@@ -183,7 +183,7 @@ layout: page
 </div>
 <div class="to_right_hidden">
   <h4>Контакты:</h4>
-  <img src="assets/pictures/call-calling.svg" class="icon_contacts"> (***) *** ** **
+  <img src="assets/pictures/call-calling.svg" class="icon_contacts"><a href='https://t.me/higgsbaton'>@higgsbaton</a>
   <br>
   <img src="assets/pictures/message-5.svg" class="icon_contacts"> vovsan@gmail.com
   <br>
